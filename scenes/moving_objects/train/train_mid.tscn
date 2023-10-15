@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://d188673vqwl42"]
+
+[ext_resource type="PackedScene" uid="uid://brg6n5202lean" path="res://assets/models/furniture_from_grabcad/train_mid.gltf" id="1_fuj1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m3loi"]
+size = Vector3(4.91862, 1.2121, 8.15445)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6x23k"]
+size = Vector3(16.0708, 1, 8.46891)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gtjel"]
+size = Vector3(14.0869, 6.18497, 1.04547)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1br2o"]
+size = Vector3(1.07294, 4.17229, 9.40653)
+
+[node name="Node3D" type="CharacterBody3D"]
+
+[node name="train_mid" parent="." instance=ExtResource("1_fuj1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.91102, 0, 0)
+skeleton = NodePath("")
+
+[node name="coll_rear_platform" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0592, -0.503833, -0.000193119)
+shape = SubResource("BoxShape3D_m3loi")
+
+[node name="coll_front_base_platform" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09962, 0.646808, -0.000193119)
+shape = SubResource("BoxShape3D_6x23k")
+
+[node name="coll_wall_right" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07425, 1.96277, 4.15057)
+shape = SubResource("BoxShape3D_gtjel")
+
+[node name="coll_wall_left" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07425, 1.96277, -4.27948)
+shape = SubResource("BoxShape3D_gtjel")
+
+[node name="coll_wall_front" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.61497, 2.97596, 0)
+shape = SubResource("BoxShape3D_1br2o")
+
+[node name="coll_wall_rear" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4023, 2.97596, 0)
+shape = SubResource("BoxShape3D_1br2o")

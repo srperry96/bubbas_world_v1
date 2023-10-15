@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://t11mxt2jhw3d"
+path="res://.godot/imported/office chair26202301.obj-98d08ecd0e6ebbb0c1ada62580b06aeb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/office chair26202301.obj-98d08ecd0e6ebbb0c1ada62580b06aeb.mesh"]
+
+source_file="res://assets/models/furniture_from_grabcad/office-chair-oguz-buran-1.snapshot.1/office chair26202301.obj"
+dest_files=["res://.godot/imported/office chair26202301.obj-98d08ecd0e6ebbb0c1ada62580b06aeb.mesh", "res://.godot/imported/office chair26202301.obj-98d08ecd0e6ebbb0c1ada62580b06aeb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

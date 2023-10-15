@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ct3buykgsyis3"]
+
+[ext_resource type="ArrayMesh" uid="uid://ba8gelyjv4mt" path="res://assets/models/cage/new_cage.obj" id="1_8ogkq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s71ev"]
+albedo_color = Color(0.85098, 0.713726, 0.447059, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hko0f"]
+size = Vector3(14.9829, 13.875, 0.119797)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ytwqn"]
+size = Vector3(0.166723, 13.8154, 12.0279)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4y3kr"]
+size = Vector3(14.8542, 0.246173, 11.9976)
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_s71ev")
+mesh = ExtResource("1_8ogkq")
+
+[node name="coll_side1" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48318, 6.8746, -0.0522361)
+shape = SubResource("BoxShape3D_hko0f")
+
+[node name="coll_side2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48318, 6.8746, -11.9478)
+shape = SubResource("BoxShape3D_hko0f")
+
+[node name="coll_side3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0858204, 6.89734, -6.01078)
+shape = SubResource("BoxShape3D_ytwqn")
+
+[node name="coll_side4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9522, 6.89734, -6.01078)
+shape = SubResource("BoxShape3D_ytwqn")
+
+[node name="coll_base" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.49988, 0.10533, -6.00244)
+shape = SubResource("BoxShape3D_4y3kr")

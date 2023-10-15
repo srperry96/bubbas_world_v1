@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cu4g8x3gnxqp3"
+path="res://.godot/imported/sofa 1003202301.obj-e14b0671b59dceb3a45d57249c8d1029.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sofa 1003202301.obj-e14b0671b59dceb3a45d57249c8d1029.mesh"]
+
+source_file="res://assets/models/furniture_from_grabcad/sofa-anup-cauhan-1.snapshot.1/sofa 1003202301.obj"
+dest_files=["res://.godot/imported/sofa 1003202301.obj-e14b0671b59dceb3a45d57249c8d1029.mesh", "res://.godot/imported/sofa 1003202301.obj-e14b0671b59dceb3a45d57249c8d1029.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://f185e8jcua4l"]
+
+[ext_resource type="ArrayMesh" uid="uid://cu4g8x3gnxqp3" path="res://assets/models/furniture_from_grabcad/sofa-anup-cauhan-1.snapshot.1/sofa 1003202301.obj" id="1_gd3po"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1jesh"]
+emission_enabled = true
+emission = Color(0.792157, 0, 0.705882, 1)
+emission_energy_multiplier = 0.52
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7omi"]
+size = Vector3(156.936, 27.4175, 61.2433)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s20sy"]
+size = Vector3(20.7861, 46.8979, 74.4771)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4fet5"]
+size = Vector3(150.155, 62.8107, 24.7802)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.1603, 0)
+material_override = SubResource("StandardMaterial3D_1jesh")
+mesh = ExtResource("1_gd3po")
+skeleton = NodePath("../..")
+
+[node name="coll_seat" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55754, 16.3796, 6.11541)
+shape = SubResource("BoxShape3D_k7omi")
+
+[node name="coll_arm1" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.984485, 0.17547, 0, -0.17547, 0.984485, 0, 0, 0, 1, 73.7405, 22.8459, 0)
+shape = SubResource("BoxShape3D_s20sy")
+
+[node name="coll_arm2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.987044, -0.16045, 0, 0.16045, 0.987044, 0, 0, 0, 1, -78.7354, 24.6104, 0)
+shape = SubResource("BoxShape3D_s20sy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.976661, 0.214786, 0, -0.214786, 0.976661, -3.69538, 38.3739, -24.6847)
+shape = SubResource("BoxShape3D_4fet5")
